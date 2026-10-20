@@ -82,7 +82,7 @@ const LoginPage = () => {
             ? 'Unable to sign in. Please try again.'
             : requestError.message.includes('valid user session')
               ? requestError.message
-              : 'Cannot reach the server. Check that the backend is running at http://localhost:3000.'),
+              : 'Cannot reach the server. Check that the backend is running at https://chatgpt-clone-jce0.onrender.com.'),
       );
     } finally {
       setSubmitting(false);

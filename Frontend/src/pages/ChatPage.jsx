@@ -17,7 +17,7 @@ function getErrorMessage(error, fallback) {
     return 'Your session has expired. Sign in to continue.'
   }
   if (!error.response) {
-    return 'Cannot reach the server. Check that the backend is running at http://localhost:3000.'
+    return 'Cannot reach the server. Check that the backend is running at https://chatgpt-clone-jce0.onrender.com.'
   }
   return error.response.data?.message || fallback
 }
@@ -90,7 +90,7 @@ function ChatPage() {
         })
       } else if (message.includes('xhr') || message.includes('websocket') || message.includes('timeout')) {
         setSocketError(
-          'Cannot reach the backend at http://localhost:3000. Make sure it is running and allows this frontend origin.',
+          'Cannot reach the backend at https://chatgpt-clone-jce0.onrender.com. Make sure it is running and allows this frontend origin.',
         )
       } else {
         setSocketError(error.message || 'Unable to connect to the assistant.')
